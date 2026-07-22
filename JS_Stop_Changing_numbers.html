@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+
+<body style="text-align: center;">
+
+    <div>
+        <h1>Click on the Number</h1>
+    </div>
+
+    <div id="number" style="font-size: 320px;" onclick="stopStart()"></div>
+
+    <script>
+
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        var stopped = true;
+
+        var number;
+
+        var t;
+
+
+        function change() {
+
+            var randomNum = (Math.floor(Math.random() * 10));
+
+            number.innerHTML = numbers[randomNum];
+
+        }
+
+
+        function stopStart() {
+
+            if (stopped) {
+
+                stopped = false;
+
+                t = setInterval(change, 100);
+
+            }
+
+            else {
+
+                clearInterval(t);
+
+                stopped = true;
+
+            }
+
+        }
+
+
+        window.onload = function () {
+
+            number = document.getElementById("number");
+
+            stopStart();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
