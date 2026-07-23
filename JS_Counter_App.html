@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            margin: auto;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin: 25px;
+            font-size: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Counter App</h1>
+
+        <p id="value">0</p>
+
+        <button id="button-increment">Increase</button>
+
+        <button id="button-decrement">Decrease</button>
+
+        <button id="button-reset">Reset</button>
+
+    </div>
+
+
+    <script>
+
+        window.onload = function () {
+
+            var value = 0;
+
+            var buttonIncrement = document.getElementById("button-increment");
+
+            var buttonDecrement = document.getElementById("button-decrement");
+
+            var buttonReset = document.getElementById("button-reset");
+
+
+            buttonIncrement.onclick = function () {
+
+                value++;
+
+                document.getElementById("value").innerHTML = value;
+
+            }
+
+
+            buttonDecrement.onclick = function () {
+
+                value--;
+
+                document.getElementById("value").innerHTML = value;
+
+            }
+
+
+            buttonReset.onclick = function () {
+
+                value = 0;
+
+                document.getElementById("value").innerHTML = value;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
